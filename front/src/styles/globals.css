@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+}
+
+/* Masonry Grid Styles */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -24px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 24px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements */
+  margin-bottom: 24px;
+}
+
+/* Custom Animations for Widget Store */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDelay2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandAndCollapse {
+  0% {
+    transform: scale(0.8) rotate(-5deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInDelay 1.2s ease-out forwards;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInDelay2 1.6s ease-out forwards;
+}
+
+.animate-expand-collapse {
+  animation: expandAndCollapse 0.6s ease-out forwards;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px) scale(1.08); }
+  100% { transform: translateY(0); }
+}
+.animate-floating {
+  animation: floating 10s infinite alternate;
+}
+
+/* Calendar Custom Styles - Mint Blue Theme (Partial Custom, No box for active/now) */
+.react-calendar {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 2rem !important;
+}
+
+.react-calendar__navigation button {
+  font-size: 1.5rem !important;
+  padding: 1rem !important;
+  background: transparent !important;
+  border: none !important;
+  color: #222 !important;
+  font-weight: bold !important;
+  border-radius: 0.5rem !important;
+  transition: background 0.2s;
+}
+
+.react-calendar__navigation button:hover {
+  background: transparent !important;
+  color: #222 !important;
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  color: #222 !important;
+  margin-bottom: 1rem !important;
+}
+
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  gap: 0.5rem !important;
+}
+
+.react-calendar__tile {
+  height: 7rem !important;
+  width: 100% !important;
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  padding-top: 0.5rem !important;
+  color: #0891b2 !important; /* cyan-600 */
+}
+
+.react-calendar__tile:hover {
+  background: #f3f4f6 !important;
+  color: #0e7490 !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.react-calendar__tile--active {
+  background: transparent !important;
+  color: #0e7490 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-calendar__tile--now {
+  background: transparent !important;
+  color: #2563eb !important; /* blue-600, 숫자 포인트 */
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: bold !important;
+}
+
+/* 주말 색상 (mint-blue point) */
+.react-calendar__tile--weekend {
+  color: #06b6d4 !important; /* cyan-500 */
+  font-weight: bold !important;
+}
+
+/* 공휴일 색상 (mint-blue point) */
+.react-calendar__tile--holiday {
+  color: #0ea5e9 !important; /* sky-500 */
+  font-weight: bold !important;
+} 
