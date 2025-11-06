@@ -377,6 +377,19 @@ python generate_diary.py
 
 <br>
 
+---
+
+# 📸 주요 화면 (Main Screens)
+
+| 화면 | 설명 | 이미지 |
+| :---: | :---: | :---: |
+| **로그인 화면** | 카카오/Google/GitHub 소셜 로그인 제공 | ![로그인 화면 스크린샷](assets/untold-login.png) |
+| **대시보드** | 날씨, 뉴스, 주식 등 다양한 위젯을 개인화하여 볼 수 있는 메인 화면 | ![대시보드 스크린샷](assets/untold-dashboard.png) |
+| **위젯 편집** | 사용자가 원하는 위젯을 선택하고 배치하여 맞춤형 대시보드를 구성 | ![위젯 편집 스크린샷](assets/untold-widget.png) |
+| **일기 작성** | AI가 생성한 일기 초안을 기반으로 사용자가 직관적으로 편집하는 화면 | ![일기 작성 화면 스크린샷](assets/untold-diarywrite.png) |
+| **감정 캘린더** | 2D 감정 분석 결과를 시각화하여 감정 변화 트렌드를 한눈에 파악 | ![감정 캘린더 스크린샷](assets/untold-emotion-calendar.png) |
+
+<br>
 
 ---
 
